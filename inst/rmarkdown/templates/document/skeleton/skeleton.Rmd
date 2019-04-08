@@ -1,0 +1,36 @@
+---
+title: "An R Markdown Template Traditional Chinese"
+subtitle: "Portable for HTML & PDF outputs"
+author: "Name\\thanks{write author info here for PDF output}"
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
+#bibliography: ref.bib
+csl: apa.csl
+documentclass: article
+urlcolor: "blue"
+fontsize: 12pt 
+geometry: a4paper
+linestretch: 1.35
+links-as-notes: true
+output:
+  bookdown::html_document2:
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+    toc_float:
+      collapsed: yes
+    css: html/style.css
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    number_sections: yes
+    toc: no
+    includes:
+      in_header: latex/header.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 使用 Level 1 標題開始
+
+不需額外安裝字體，此套件提供便捷的函數直接下載。
