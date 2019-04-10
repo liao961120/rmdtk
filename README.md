@@ -6,5 +6,6 @@ R Markdown Toolkit
 
 ``` r
 #install.packages('remotes')
-remotes::install_github('liao961120/rmdtk', build_opts = c("--no-resave-data"))
+remotes::install_github('liao961120/rmdtk')
+rmdtk::download_fonts()
 ```
