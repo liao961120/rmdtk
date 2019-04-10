@@ -15,7 +15,7 @@
 
 % 設定英文字體
 %\setmainfont[Path=fonts/,
-% BoldFont={LiberationSerif-Bold.ttf}, 
+% BoldFont={LiberationSerif-Bold.ttf},
 % ItalicFont={LiberationSerif-Italic.ttf},
 % BoldItalicFont={LiberationSerif-BoldItalic.ttf}]{LiberationSerif.ttf}
 
@@ -23,8 +23,8 @@
 %字型的設定「必須」使用系統內的字型，或 `fonts/` 內的字體
 % AR PL KaitiM Big5, 標楷體, .PingFang TC, Noto Sans CJK TC, HanWangHeiLight, HanWangHeiHeavy
 % 粗體字型: BoldFont
-\setCJKmainfont[Path=latex/,AutoFakeBold=1.5,AutoFakeSlant=.4]{bkai00mp.ttf}
-\setCJKmonofont[Path=latex/]{NotoSansMonoCJKtc.otf}
+\setCJKmainfont[Path=latex/,AutoFakeBold=2.5,AutoFakeSlant=.3]{kaiti}
+\setCJKmonofont[Path=latex/]{NotoSansMonoCJKtc}
 %若字體沒有粗體字型，將上面一行註解掉，改用下方這行
 %\setCJKmainfont[AutoFakeBold=1.5,AutoFakeSlant=.4]{AR PL KaitiM Big5}
 
@@ -55,7 +55,7 @@
 
 %無編碼之 footer
 %使用： \blfootnote{此段文字顯示於 footer region 內}
-%見 https://bit.ly/2OI15vo (原始碼) 與 https://bit.ly/2YPkaR9 (輸出) 
+%見 https://bit.ly/2OI15vo (原始碼) 與 https://bit.ly/2YPkaR9 (輸出)
 \makeatletter
 \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
 \makeatother
