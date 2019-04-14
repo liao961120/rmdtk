@@ -1,9 +1,9 @@
 ---
-title: "An R Markdown Template Traditional Chinese"
+title: "An R Markdown Template for Traditional Chinese"
 subtitle: "Portable for HTML & PDF outputs"
 author: "Name\\thanks{write author info here for PDF output}"
 date: "`r format(Sys.Date(), '%B %e, %Y')`"
-#bibliography: ref.bib
+bibliography: ref.bib
 csl: apa.csl
 documentclass: article
 urlcolor: "blue"
@@ -11,6 +11,7 @@ fontsize: 12pt
 geometry: a4paper
 linestretch: 1.35
 links-as-notes: true
+always_allow_html: yes
 output:
   bookdown::html_document2:
     number_sections: yes
@@ -31,6 +32,85 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# 使用 Level 1 標題開始
+# 繁體中文 R Markdown 模板
 
 不需額外安裝字體，此套件提供便捷的函數直接下載。
+
+## 統計圖
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+
+
+# 常用 bookdown 語法
+
+以下內容完全根據 @xie2016 所撰寫。
+
+- [Markdown Extensions by bookdown](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html)
+
+## Text Reference {#text-ref}
+
+(ref:iris-plot-caption) 使用 `ggplot2` 繪製 `iris` 數據。這段文字用於 figure caption 可使用 **R Markdown 語法**，甚至 inline code chunk。此圖繪製於 `r Sys.Date()`。
+
+```{r iris-plot, fig.cap='(ref:iris-plot-caption)'}
+library(ggplot2)
+ggplot(data = iris) +
+  geom_point(aes(Sepal.Length, Petal.Width, color = Species))
+```
+
+
+同樣的邏輯也可應用於表格上：
+
+(ref:iris-table-caption) 這是使用 `bookdown` **Text Reference** 產生的 table caption。
+
+```{r iris-table}
+knitr::kable(iris[1:5, 1:3],
+             caption = '(ref:iris-table-caption)')
+```
+
+
+
+## [Cross References](https://bookdown.org/yihui/bookdown/cross-references.html)
+
+章節、圖片、表格，皆可透過 `bookdown` 的特殊語法 `\@ref(label)` 在文章任意處建立超連結。要建立超連結前，需要先有 ID。
+
+`\@ref(label)` 中的 **`label`** 依據使用的是章節、圖片或表格[^reference]會有所不同：
+
+- 章節：`ID`
+
+- 圖片：`fig:code-chunk-label`
+
+- 表格：`tab:code-chunk-label`
+
+
+### 章節 ID {#section-ref}
+
+為章節建立 ID 的方式很簡單，只要在標題後面加上 `{#<id>}` 即可
+
+```markdown
+## 章節 ID {#section-ref}
+```
+
+### 圖片與表格 ID {#table-fig-ref}
+
+圖片與表格的 ID 即是生成它們的 R code chunk 的 label -- ````{r label}`。
+
+
+### 於文章他處引用章節、圖片與表格
+
+透過 
+
+- `\@ref(id)` 連結 Section \@ref(section-ref)
+
+- `\@ref(fig:iris-plot)` 連結 Fig. \@ref(fig:iris-plot)
+
+- `\@ref(tab:iris-table)` 連結 Table \@ref(tab:iris-table)
+
+
+# 參考資料 {- #references}
+
+
+
+[^reference]: 此外，`bookdown` 還提供了[數學公式與定理的引用](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#equations)。

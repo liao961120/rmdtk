@@ -1,4 +1,5 @@
 name: 'Portable CJK Document for HTML & PDF'
 description: >
-   A description of the template
+   R Markdown template for Traditional Chinese
+   based on `bookdown::html_document2` & `bookdown::pdf_document2`.
 create_dir: yes
