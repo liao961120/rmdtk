@@ -54,10 +54,8 @@ plot(pressure)
 
 (ref:iris-plot-caption) 使用 `ggplot2` 繪製 `iris` 數據。這段文字用於 figure caption 可使用 **R Markdown 語法**，甚至 inline code chunk。此圖繪製於 `r Sys.Date()`。
 
-```{r iris-plot, fig.cap='(ref:iris-plot-caption)'}
-library(ggplot2)
-ggplot(data = iris) +
-  geom_point(aes(Sepal.Length, Petal.Width, color = Species))
+```{r plot2, fig.cap='(ref:iris-plot-caption)'}
+plot(pressure)
 ```
 
 
