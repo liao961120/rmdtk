@@ -70,7 +70,7 @@ download_file2 <- function(dest_dir) {
   temp_kai <- tempfile()
   temp_mono <- tempfile()
 
-  utils::download.file(kaiti, destfile = file.path(dest_dir, 'kaiti.ttf'))
+  utils::download.file(kaiti, destfile = file.path(dest_dir, 'kaiti'))
   utils::download.file(mono, destfile = temp_mono)
 
   # Decompress
