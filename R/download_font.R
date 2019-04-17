@@ -63,16 +63,17 @@ download_file <- function(ori_dir) {
 
 download_file2 <- function(dest_dir) {
 
-  kaiti <- 'https://github.com/sih4sing5hong5/huan1-ik8_lun7-bun5/raw/master/%E5%AD%97%E9%AB%94/kaiu.ttf'
+  kaiti <- 'https://liao961120.github.io/deps/fonts/kaiti.zip'
   mono <- 'https://liao961120.github.io/deps/fonts/NotoSansMonoCJKtc.zip'
 
   cat('Downloading fonts to', dest_dir, '\n')
   temp_kai <- tempfile()
   temp_mono <- tempfile()
 
-  utils::download.file(kaiti, destfile = file.path(dest_dir, 'kaiti'))
+  utils::download.file(kaiti, destfile = temp_kai)
   utils::download.file(mono, destfile = temp_mono)
 
   # Decompress
+  utils::unzip(temp_kai, exdir = dest_dir)
   utils::unzip(temp_mono, exdir = dest_dir)
 }
