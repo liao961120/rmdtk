@@ -64,7 +64,7 @@ download_file <- function(ori_dir) {
 download_file2 <- function(dest_dir) {
 
   kaiti <- 'https://depend.netlify.com/fonts/kaiti.zip'
-  mono <- 'https://depend.netlify.com/fonts/NotoSansMonoCJKtc.zip'
+  mono <- 'https://liao961120.github.io/deps/fonts/NotoSansMonoCJKtc.zip'
 
   cat('Downloading fonts to', dest_dir, '\n')
   temp_kai <- tempfile()
