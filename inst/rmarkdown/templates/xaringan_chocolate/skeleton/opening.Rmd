@@ -1,0 +1,31 @@
+---
+title: ""
+output:
+  xaringan::moon_reader:
+    nature:
+      ratio: "16:10"
+      beforeInit: ["addons/macros.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightSpans: false
+      highlightLines: true
+      countIncrementalSlides: no
+      navigation:
+        scroll: false
+    css: [default, chocolate, chocolate-fonts, addons/custom.css]
+    yolo: false
+    seal: false 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align = 'center')
+library(knitr)
+```
+
+## Opening
+
+blah blah blah
+
+---
+
+
+blah blah blah
