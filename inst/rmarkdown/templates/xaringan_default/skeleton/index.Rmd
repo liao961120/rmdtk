@@ -1,0 +1,59 @@
+---
+title: "TITLE HERE<br>.ms[Subtitle Here]"
+author: '<br>.ms[Author]<br><br><br><br>[bit.ly/slide-short-url](http://slide-short-url)'
+output:
+  xaringan::moon_reader:
+    nature:
+      ratio: "16:10"
+      beforeInit: ["addons/macros.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightSpans: false
+      highlightLines: true
+      countIncrementalSlides: no
+    css: [default, default-fonts, addons/custom.css]
+    yolo: false
+    seal: true 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align = 'center')
+library(knitr)
+options(knitr.duplicate.label = 'allow')
+```
+
+---
+
+```{r child='opening.Rmd'}
+```
+
+---
+
+class: center, middle, inverse
+background-color: black
+
+# Part Ⅰ
+
+---
+
+<!-- Ending: Thank You -->
+
+background-image: url(https://liao961120.github.io/slides/img/pictures/cabin.jpg)
+background-position: center
+background-size: cover
+
+class: center, inverse
+
+# .l[Thank You]
+
+---
+
+background-image: url(https://liao961120.github.io/slides/img/pictures/cabin.jpg)
+background-position: center
+background-size: cover
+
+class: center, inverse
+
+---
+
+```{r child='contact.Rmd'}
+```

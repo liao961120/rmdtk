@@ -1,0 +1,51 @@
+---
+title: ""
+output:
+  xaringan::moon_reader:
+    nature:
+      ratio: "16:10"
+      beforeInit: ["addons/macros.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightSpans: false
+      highlightLines: true
+      countIncrementalSlides: no
+      navigation:
+        scroll: false
+    css: [default, chocolate, chocolate-fonts, addons/custom.css]
+    yolo: false
+    seal: false 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align = 'center')
+library(knitr)
+```
+
+
+background-image: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 100%), url(https://liao961120.github.io/slides/img/pictures/cabin.jpg)
+background-position: center
+background-size: cover
+
+![:abs 20%, 70%, 38%](https://liao961120.github.io/img/icon-trans-sbg.png)
+
+<br><br>
+
+# Contact Info
+
+
+### Yongfu Liao
+.l[
+- <https://liao961120.github.io>
+
+- ![:scale 1em](img/GitHub-Mark.png) [liao961120](https://github.com/liao961120)
+
+]
+
+
+.footnote[
+### .s[Questions]
+
+- File an issue at [![:scale 1em](img/GitHub-Mark.png) username/repo](https://github.com/username/repo/blob/master/README.md) (Preferred)
+
+]
+
